@@ -6,9 +6,9 @@ const ListadoTareas = () => {
     const tareas = [
         {nombre: 'Elegir Plataforma', estado: true},
         {nombre: 'Elegir Plataforma', estado: true},
+        {nombre: 'Elegir Plataforma', estado: false},
         {nombre: 'Elegir Plataforma', estado: true},
-        {nombre: 'Elegir Plataforma', estado: true},
-        {nombre: 'Elegir Plataforma', estado: true}
+        {nombre: 'Elegir Plataforma', estado: false}
     ]
 
     return (
@@ -29,6 +29,11 @@ const ListadoTareas = () => {
                 
             
         </ul>
+
+        <button
+            type = 'button'
+            className = 'btn btn-eliminar'
+        >Eliminar Proyecto &times;</button>
       </>  
     );
 };
