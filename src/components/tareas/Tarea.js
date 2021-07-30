@@ -2,9 +2,7 @@ import React from 'react';
 
 const Tarea = () => {
     return (
-        <div>
-            
-        </div>
+        <h2>Desde Tarea</h2>
     );
 };
 
