@@ -20,7 +20,7 @@ const ProyectoState = props =>{
                 }}
             >
                 {props.children}
-        </proyectoContext.Provider>
+            </proyectoContext.Provider>
         )
 
     }

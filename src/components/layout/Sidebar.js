@@ -12,7 +12,6 @@ const Sidebar = () => {
 
            <div className = 'proyectos'>
                <h2>Tus proyectos</h2>
-
                <ListadoProyectos/>
 
             </div>
