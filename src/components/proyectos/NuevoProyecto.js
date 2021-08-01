@@ -6,7 +6,7 @@ const NuevoProyecto = () => {
 
     //obtener el state del formulario
     const proyectosContext = useContext(proyectoContext);
-    const { formulario, mostrarFormulario } = proyectosContext
+    const { proyectos, formulario, mostrarFormulario } = proyectosContext
 
     const [proyecto, guardarProyecto ] = useState({
             nombre:''
