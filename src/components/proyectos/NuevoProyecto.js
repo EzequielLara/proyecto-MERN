@@ -6,7 +6,7 @@ const NuevoProyecto = () => {
 
     //obtener el state del formulario
     const proyectosContext = useContext(proyectoContext);
-    const { proyectos, formulario, mostrarFormulario } = proyectosContext
+    const { proyectos, formulario, mostrarFormulario, agregarProyecto } = proyectosContext
 
     const [proyecto, guardarProyecto ] = useState({
             nombre:''
@@ -26,10 +26,16 @@ const NuevoProyecto = () => {
         e.preventDefault();
 
         //Validar inputs
+        if(nombre === ''){return;}
+
 
         //Agregar al state
+        agregarProyecto(proyecto)
 
         //Reiniciar el formulario
+        guardarProyecto({
+            nombre: ''
+        })
 
 
     }
