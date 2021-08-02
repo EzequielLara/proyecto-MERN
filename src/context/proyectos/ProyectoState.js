@@ -4,7 +4,7 @@ import proyectoReducer from './proyectoReducer';
 import  uuid from 'uuid';
 
 import { useReducer } from 'react';
-import {FORMULARIO_PROYECTO, OBTENER_PROYECTOS, AGREGAR_PROYECTO} from '../../types'
+import {FORMULARIO_PROYECTO, OBTENER_PROYECTOS, AGREGAR_PROYECTO, VALIDAR_FORMULARIO} from '../../types'
 
 const ProyectoState = props =>{
         
@@ -17,7 +17,8 @@ const ProyectoState = props =>{
 
         const initialState = {
             proyectos: [],
-            formulario : false
+            formulario : false,
+            errorformulario: false
         }
 
         //Dispach para ejecutar las acciones
@@ -50,6 +51,12 @@ const ProyectoState = props =>{
             
            })
         }
+        //Mostrar error en validación
+        const mostrarError = ()=>{
+            dispatch({
+                type: VALIDAR_FORMULARIO
+            })
+        }
     
     
         return (
@@ -57,9 +64,11 @@ const ProyectoState = props =>{
                 value ={{
                     proyectos: state.proyectos,
                     formulario: state.formulario,
+                    errorformulario: state.errorformulario,
                     mostrarFormulario,
                     obtenerProyectos,
-                    agregarProyecto
+                    agregarProyecto,
+                    mostrarError
                 }}
             >
                 {props.children}
