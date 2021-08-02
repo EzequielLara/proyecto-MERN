@@ -4,7 +4,7 @@ import proyectoReducer from './proyectoReducer';
 import  uuid from 'uuid';
 
 import { useReducer } from 'react';
-import {FORMULARIO_PROYECTO, OBTENER_PROYECTOS, AGREGAR_PROYECTO, VALIDAR_FORMULARIO, PROYECTO_ACTUAL} from '../../types'
+import {FORMULARIO_PROYECTO, OBTENER_PROYECTOS, AGREGAR_PROYECTO, VALIDAR_FORMULARIO, PROYECTO_ACTUAL,ELIMINAR_PROYECTO} from '../../types'
 
 const ProyectoState = props =>{
         
@@ -66,6 +66,15 @@ const ProyectoState = props =>{
                 payload: proyectoId
             })
         }
+
+        //Eliminar un proyecto
+        const eliminarProyecto = proyectoId =>{
+
+            dispatch({
+                type: ELIMINAR_PROYECTO,
+                payload: proyectoId
+            })
+        }
     
     
         return (
@@ -79,7 +88,8 @@ const ProyectoState = props =>{
                     obtenerProyectos,
                     agregarProyecto,
                     mostrarError,
-                    proyectoActual
+                    proyectoActual,
+                    eliminarProyecto
                     
                 }}
             >
