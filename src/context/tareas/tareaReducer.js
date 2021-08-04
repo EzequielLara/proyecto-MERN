@@ -10,7 +10,7 @@ export default (state, action) =>{
         case AGREGAR_TAREA:
             return{
                 ...state,
-                agregarTarea: state.tarea
+                tareas: [...state.tareas, action.payload]
             }
 
         default:
